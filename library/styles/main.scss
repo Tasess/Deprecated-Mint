@@ -1,0 +1,223 @@
+/*
+------------------------
+
+    TABLE OF CONTENTS
+
+    1. COLOR PALETTE
+
+    2. BODY SETTINGS
+
+    3. NAVIGATION
+
+    4. FOOTER
+
+    5. PAGE 
+
+        A. FRONT PAGE
+        B. CONTENT SINGLE
+        C. ...
+
+    6. SEARCH FORM
+
+------------------------
+*/
+
+/*
+----------------
+
+    1. Color Palette
+
+---------------
+*/
+
+$primary:   #70c952;
+$secondary: #e6cdc3;
+$white:     #fcf6f6;
+$brown:     #704b3c;
+$dark-brown:#46352e;
+$light:     #917b72;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/*
+----------------
+
+    2. Body Settings
+
+---------------
+*/
+body {
+    min-height: 1000px;
+    background-color: $secondary;
+    padding-top:0;
+    overflow-x: hidden;
+    font-family: 'Oswald'; 
+}
+
+/*
+----------------
+
+    3. Navigation
+
+---------------
+*/
+nav {
+    position: relative;
+    z-index: 10000;
+}
+.nav-margin {
+    min-height: 85px;
+}
+.nav-search {
+    margin-top:10px;
+    max-width: 300px;
+    margin-left: 30px;
+    border-radius: 0;
+}
+.mint-brand {
+    font-size: 3em;
+    display: inline-block;
+    padding: 7px;
+    margin-right: 65px;
+    font-family: 'Kaushan Script', cursive;
+}
+.mint-logo img{
+    margin-left: 15px;
+    @include float-left;
+}
+.mint-link li a {  
+    margin-left: 30px;
+    font-size: 1.5em;
+    display: inline-block;
+    font-family: 'Oswald';
+    font-variant: small-caps;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: black;
+}
+.mint-link li a:hover { 
+    color: $brown;
+}
+li.current-menu-item a {
+    color: $primary;
+}
+
+/*
+----------------
+
+    4. Footer
+
+---------------
+*/
+.footer {
+    background-color: $light;
+    margin-top: 50px;
+    margin-bottom:0;
+    text-align: justify;
+
+    .social-icon {
+        display: inline-block;
+        padding: 20px;
+        ul, li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.3em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+        ul, li a:hover {
+            text-decoration: none;
+        }
+    }
+
+    .mint-footer-text {
+    font-variant: small-caps;
+    margin-top: 45px;
+    padding-top: 20px;
+    margin-left: 50px;
+    }
+    }
+}
+
+
+
+
+/*
+----------------
+Carousel
+---------------
+*/
+
+
+.carousel {
+    background-color: black;
+    .carousel-control-prev{
+        background: rgb(255,255,255);
+        background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(41,30,26,0.8968721277573529) 100%);
+        transition: 0.3s;
+    }
+    .carousel-control-next {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(41,30,26,0.8968721277573529) 100%);
+        transition: 0.3s;
+        }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    @media (min-width:1025px) { //For Desktop and big Tablets ♥
+        .carousel-inner img {
+            height: 600px;
+        } 
+    }
+}
+/*
+    Post-Excerpt
+*/
+.post-main-box {
+    background-color: $white;
+    margin-top: 30px;
+    text-align: justify;
+
+    img {
+        float: unset;
+    }
+}
+/* 
+
+    Single Post 
+
+*/
+
+/*
+----------------
+
+Sidebar
+
+---------------
+*/
+.screen-reader-text{
+    height: 1px;
+    width:1px;
+    overflow: hidden;
+    position: absolute;
+}
+.sidebar li {
+    background-color:$white;
+    margin-top: 30px;
+    list-style: none;
+    padding: 10px;
+
+    .widget_search{
+        float:left;
+    }
+}
+/*
+----------------
+
+7. Mobile Tweaks
+
+---------------
+*/
